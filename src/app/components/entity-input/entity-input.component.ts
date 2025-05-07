@@ -9,11 +9,11 @@ import { FormsModule } from '@angular/forms';
 
 
 @Component({
-  selector: 'meet-input-start-entity',
+  selector: 'meet-entity-input',
   imports: [MatCardModule, MatGridListModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule, FormsModule],
-  templateUrl: './input-start-entity.component.html',
-  styleUrl: './input-start-entity.component.scss'
+  templateUrl: './entity-input.component.html',
+  styleUrl: './entity-input.component.scss'
 })
-export class InputStartEntityComponent {
+export class EntityInputComponent {
   protected quantidadeEntidades = 1
 }
