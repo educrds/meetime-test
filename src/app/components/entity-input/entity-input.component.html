@@ -8,7 +8,7 @@
     <div class="form-group">
       <mat-form-field appearance="fill">
         <mat-icon matPrefix>play_arrow</mat-icon>
-        <input matInput type="number" [(ngModel)]="quantidadeEntidades" name="quantidadeEntidades" #input="ngModel" required min="1" />
+        <input matInput type="number" [(ngModel)]="entityValue" (ngModelChange)="updateEntityValue($event)" #input="ngModel" required min="1" />
         <p matSuffix>Entidades</p>
         @if(input.invalid && input.touched){
           <mat-error>Valor deve ser maior que 0</mat-error>        
