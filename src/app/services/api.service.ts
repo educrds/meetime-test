@@ -275,20 +275,20 @@ const API_DATA: ApiDataResponse = {
 })
 export class ApiService {
   /**
-   * Retorna uma lista de ciclos disponíveis.
-   * Cada ciclo contém informações como nome, prioridade, entidades disponíveis e estrutura detalhada por dia.
+   * Returns a list of available cycles.
+   * Each cycle contains information such as name, priority, available entities, and detailed structure by day.
    * 
-   * @returns Um Observable contendo um array de objetos do tipo Cycle.
+   * @returns An Observable containing an array of objects of type Cycle.
    */
   public getCycles(): Observable<Cycle[]> {
     return of(API_DATA.cycles);
   }
 
   /**
-   * Retorna uma projeção de eventos organizados por dia.
-   * Cada projeção contém informações como reuniões, e-mails, chamadas e acompanhamentos para cada dia útil.
+   * Returns a projection of events organized by day.
+   * Each projection contains information such as meetings, emails, calls, and follow-ups for each business day.
    * 
-   * @returns Um Observable contendo um array de objetos do tipo EventsProjection.
+   * @returns An Observable containing an array of objects of type EventsProjection.
    */
   public getEventsProjection(): Observable<EventsProjection[]> {
     return of(API_DATA.eventsProjection);
