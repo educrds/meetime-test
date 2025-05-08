@@ -3,13 +3,19 @@ export type Cycle = {
   availableEntities: number;
   priority: string;
   structure: Structure[];
-  events_today?: number;
+  selectedEntities?: number;
+  remainingEntities?: number;
+  disabled?: boolean;
+  eventsTodayDetailed?: Events
 }
 
-type Structure = {
-  day: number;
+type Events = {
   meetings: number;
   emails: number;
   calls: number;
   follows: number;
 }
+
+type Structure = {
+  day: number;
+} & Events
