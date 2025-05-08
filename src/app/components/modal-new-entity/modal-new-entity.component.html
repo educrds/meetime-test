@@ -1,0 +1,20 @@
+  <h2 matDialogTitle>Iniciar novas entidades</h2>
+  <mat-dialog-content class="modal-content">
+  <meet-entity-input />
+  <mat-divider></mat-divider>
+  <meet-panel-cycles>
+    <<meet-table-cycles #cyclesTable />
+  </meet-panel-cycles>
+  <mat-divider></mat-divider>
+
+  <section>
+    <h4>Previsão de eventos futuros</h4>
+    <p>A previsão inclui eventos dos ciclos relacionados às entidades e é atualizada sempre que novas entidades forem iniciadas.</p>
+  </section>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-stroked-button>Fechar</button>
+  <button mat-flat-button>Iniciar novas entidades</button>
+</mat-dialog-actions>

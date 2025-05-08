@@ -1,0 +1,10 @@
+:host {
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .modal-new-entity {
+    width: 100%;
+  }
+}
