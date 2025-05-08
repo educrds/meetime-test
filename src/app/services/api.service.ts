@@ -266,6 +266,48 @@ const API_DATA: ApiDataResponse = {
           "follows": 9
         }
       ]
+    },
+    {
+      "name": "Ciclo 6 - Criado",
+      "availableEntities": 0,
+      "priority": "HIGH",
+      "structure": [
+        {
+          "day": 1,
+          "meetings": 8,
+          "emails": 7,
+          "calls": 5,
+          "follows": 4
+        },
+        {
+          "day": 2,
+          "meetings": 3,
+          "emails": 9,
+          "calls": 5,
+          "follows": 4
+        },
+        {
+          "day": 3,
+          "meetings": 4,
+          "emails": 4,
+          "calls": 4,
+          "follows": 4
+        },
+        {
+          "day": 4,
+          "meetings": 8,
+          "emails": 4,
+          "calls": 3,
+          "follows": 2
+        },
+        {
+          "day": 5,
+          "meetings": 4,
+          "emails": 3,
+          "calls": 8,
+          "follows": 9
+        }
+      ]
     }
   ]
 }
