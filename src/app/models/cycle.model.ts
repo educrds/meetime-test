@@ -1,3 +1,5 @@
+import { Events, EventsProjection } from "./projection.model";
+
 export type Cycle = {
   name: string;
   availableEntities: number;
@@ -6,16 +8,10 @@ export type Cycle = {
   selectedEntities?: number;
   remainingEntities?: number;
   disabled?: boolean;
-  eventsTodayDetailed?: Events
+  eventsCycle?: Structure[]
+  eventsTodayDetailed?: Structure
 }
 
-type Events = {
-  meetings: number;
-  emails: number;
-  calls: number;
-  follows: number;
-}
-
-type Structure = {
+export type Structure = {
   day: number;
 } & Events

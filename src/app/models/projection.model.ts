@@ -4,7 +4,7 @@ export type EventsProjection = {
   events: Events;
 }
 
-type Events = {
+export type Events = {
   meetings: number;
   emails: number;
   calls: number;
