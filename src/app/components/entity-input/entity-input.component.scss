@@ -6,14 +6,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 1rem;
 
-      > div {
+      > div:nth-child(1) {
         flex: 1;
       }
 
+      > div:nth-child(2) {
+        flex: 0.5;
+      }
+
       .form-group {
-        display: flex;
-        flex-direction: column;
+        justify-items: end;
 
         span {
           align-self: flex-end;
@@ -21,4 +25,46 @@
       }
     }
   }
+
+  .custom-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    width: fit-content;
+    height: 40px;
+  
+    .icon {
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mat-icon {
+        font-size: 20px;
+        color: #555;
+      }
+    }
+  
+    input {
+      border: none;
+      outline: none;
+      width: 120px;
+      text-align: center;
+      font-size: 16px;
+      padding: 0;
+      height: 100%;
+    }
+  
+    .suffix {
+      background: #eee;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #555;
+      height: 100%;
+    }
+  }
+  
 }

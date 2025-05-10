@@ -1,20 +1,24 @@
 <mat-card class="entities-card">
   <div class="grid-card">
     <div>
-      <h2>Entidades à iniciar</h2>
+      <h3>Entidades à iniciar</h3>
       <p>Após o início, os eventos serão disponibilizados para execução nos dias que estão definidos em seus ciclos.</p>
     </div>
 
     <div class="form-group">
-      <mat-form-field appearance="fill">
-        <mat-icon matPrefix>play_arrow</mat-icon>
-        <input matInput type="number" [(ngModel)]="entityValue" (ngModelChange)="updateEntityValue($event)" #input="ngModel" required min="1" />
-        <p matSuffix>Entidades</p>
-        @if(input.invalid && input.touched){
-          <mat-error>Valor deve ser maior que 0</mat-error>        
-        }
-      </mat-form-field>
-      <span>Novos eventos para hoje: <strong>35 eventos</strong></span>
+      <div class="custom-input-wrapper">
+        <div class="icon">
+          <mat-icon>play_arrow</mat-icon>
+        </div>
+        <input matInput
+         type="number"
+         [(ngModel)]="entityValue"
+         (ngModelChange)="updateEntityValue($event)"
+         min="1"
+         required />
+        <div class="suffix">Entidades</div>
+      </div>
+      <span>Novos eventos para hoje: <strong>{{ totalEventsToday() }} eventos</strong></span>
     </div>
   </div>
 </mat-card>
