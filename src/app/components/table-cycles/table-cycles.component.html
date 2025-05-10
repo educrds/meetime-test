@@ -1,0 +1,52 @@
+<p><span>Ciclos com entidades disponíveis ({{dataSource.data.length}})</span></p>
+<mat-divider></mat-divider>
+
+  <table mat-table [dataSource]="dataSource">
+
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox
+          (click)="$event.stopPropagation()"
+          [checked]="selection.isSelected(row)"
+          [disabled]="row.disabled"
+          (change)="toggleCycleSelection(row)"
+      ></mat-checkbox>
+      </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> &nbsp; </th>
+      <td mat-cell *matCellDef="let element">
+        <meet-cycle-name-element [name]="element.name" [priority]="element.priority" />
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="selected_available">
+      <th mat-header-cell *matHeaderCellDef> Selecionados/Disponíveis </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.selectedEntities }}/{{ element.availableEntities }}
+      </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="detailed_structure_today">
+      <th mat-header-cell *matHeaderCellDef> Eventos para hoje </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.eventsTodayDetailed.calls + element.eventsTodayDetailed.emails + element.eventsTodayDetailed.meetings + element.eventsTodayDetailed.follows }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    (click)="toggleCycleSelection(row)"
+    [class.disabled-row]="row.disabled"
+  ></tr>
+  </table>
+  <p><span>Ciclos sem entidades disponíveis ({{ cyclesWithoutSpace.length }})</span></p>
+  <mat-divider></mat-divider>
+  <mat-list>
+    @for(cycle of cyclesWithoutSpace; track cycle){
+      <meet-cycle-name-element [name]="cycle.name" [priority]="cycle.priority" />
+    }
+  </mat-list>
