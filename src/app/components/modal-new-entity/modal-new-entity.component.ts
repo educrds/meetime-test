@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {
-  MatDialogTitle,
   MatDialogContent,
   MatDialogActions,
 } from '@angular/material/dialog';
@@ -9,11 +8,12 @@ import { EntityInputComponent } from '../entity-input/entity-input.component';
 import { PanelCyclesComponent } from '../panel-cycles/panel-cycles.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { TableCyclesComponent } from '../table-cycles/table-cycles.component';
+import { EventsChartComponent } from "../events-chart/events-chart.component";
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'meet-modal-new-entity',
   imports: [
-    MatDialogTitle,
     MatDialogContent,
     MatDialogActions,
     MatButtonModule,
@@ -21,7 +21,9 @@ import { TableCyclesComponent } from '../table-cycles/table-cycles.component';
     PanelCyclesComponent,
     MatDividerModule,
     TableCyclesComponent,
-  ],
+    EventsChartComponent,
+    MatIconModule
+],
   templateUrl: './modal-new-entity.component.html',
   styleUrl: './modal-new-entity.component.scss',
 })
