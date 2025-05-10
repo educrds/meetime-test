@@ -15,7 +15,8 @@ export class AppComponent {
     this.dialog.open(ModalNewEntityComponent, {
       disableClose: true,
       hasBackdrop: true,  
-      maxWidth: '50vw'
+      maxWidth: '50vw',
+      maxHeight: '100vh'
     });
   }}
 
