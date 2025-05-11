@@ -1,4 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+h2,
+h4 {
+  font-weight: 500;
+  margin: 0;
+}
+thead {
+  background-color: var(
+    --mdc-elevated-card-container-color,
+    var(--mat-sys-surface-container-low)
+  ) !important;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  th {
+    color: #787b79;
+  }
+}
+
+.mat-divider {
+  opacity: 0.3;
+  border-top-width: 2px;
+}
+
+.mat-expansion-panel {
+  .mat-expansion-panel-header {
+    padding-left: 0 !important;
+  }
+
+  &:not([class*="mat-elevation-z"]),
+  &:hover {
+    box-shadow: none !important;
+  }
+
+  .mat-expansion-panel-body {
+    padding: 0 !important;
+  }
+}
+
+.mdc-button {
+  border-radius: 0.3rem !important;
+
+  &.mat-mdc-outlined-button {
+    color: #00732f !important;
+  }
+
+  &.mat-mdc-unelevated-button {
+    background-color: #00732f !important;
+  }
+}
+
+.mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background {
+  background-color: #00732f !important;
+  border-color: #00732f !important;
+}
