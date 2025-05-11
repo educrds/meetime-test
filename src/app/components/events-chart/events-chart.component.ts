@@ -112,7 +112,7 @@ export class EventsChartComponent implements OnInit {
    * @param color Color used to render the dataset in the chart.
    * @returns A formatted dataset object for chart display.
   */
-  private _createDataset(label: string, days: number[], data: any, key: string, color: string) {
+  private _createDataset(label: string, days: number[], data: {[day:number]: Events}, key: keyof Events, color: string) {
     return {
       label: label,
       data: days.map((day) => data[day]?.[key] || 0),
