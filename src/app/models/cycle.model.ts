@@ -1,4 +1,4 @@
-import { Events, EventsProjection } from "./projection.model";
+import { Events } from "./projection.model";
 
 export type Cycle = {
   name: string;

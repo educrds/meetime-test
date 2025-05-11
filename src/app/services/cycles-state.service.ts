@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { Cycle, Structure } from '../models/cycle.model';
+import { Structure } from '../models/cycle.model';
 
 @Injectable({
   providedIn: 'root'
