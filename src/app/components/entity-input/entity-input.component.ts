@@ -64,7 +64,7 @@ export class EntityInputComponent {
    * It updates the entity value in the EntityStateService.
    * @param newValue The new value to set for the entity.
    */
-  protected updateEntityValue(newValue: number) {
+  protected updateEntityValue(newValue: number): void {
     this._entityStateService.updateStateEntityValue(newValue);
   }
 }
