@@ -59,7 +59,10 @@ Esta aplicação projeta e visualiza dinamicamente eventos diários com base na 
 
 3.  **Instale as dependências:** `npm install`
 
-4.  **Execute o servidor de desenvolvimento:** Após a instalação das dependências, execute o comando para iniciar o servidor de desenvolvimento: `ng serve`  
+4.  **Execute o servidor de desenvolvimento:** Após a instalação das dependências, execute o comando para iniciar o servidor de desenvolvimento: `ng serve`
+
+## Aplicação
+![meetime](https://github.com/user-attachments/assets/1c99353e-f664-486f-87f0-a4edd94a2331)
 
 ## Dificuldades
 
