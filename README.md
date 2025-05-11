@@ -51,7 +51,7 @@ Esta aplicação projeta e visualiza dinamicamente eventos diários com base na 
 
 2.  **Angular 19 e RxJs**.
 
-4. **Chart.JS**: Biblioteca para criação de gráficos, para exibir projeção de eventos futuros.
+4. **Chart.JS**: Biblioteca escolhida para a criação de gráficos, utilizada para exibir a projeção de eventos futuros de maneira visual e intuitiva. A escolha se deu pela sua simplicidade, ampla documentação e fácil integração com Angular.
 
 ## Instalação
 
